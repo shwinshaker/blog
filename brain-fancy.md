@@ -3,7 +3,7 @@ title: 脑子里的怪东西
 subtitle: can't stop thinking about stupid things
 layout: "page"
 icon: fa-book
-order: 4
+order: 5
 ---
 
 * 机器学习——自然语言处理来感知交流中的情绪正负
