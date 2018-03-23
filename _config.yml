@@ -31,7 +31,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: 天山童子
-subtitle: 全村的希望
+subtitle: Carpe Diem
 description: >- # this means to ignore newlines until "baseurl:"
   This is the demo site for a Jekyll theme version of
   HTML5 UP's sleek, responsive site template Prologue.
@@ -61,6 +61,10 @@ google_analytics:
 remote_theme: chrisbobbe/jekyll-theme-prologue
 collections: [sections]
 
+plugins:
+    - jekyll-gist
+gist:
+    noscript: false
 # plugins:
 #     - jekyll-archives
 # jekyll-archives:
