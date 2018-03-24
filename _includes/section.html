@@ -13,7 +13,8 @@
 
 {%- if include.photo and include.photo-alt -%}
 	{%- capture _photo -%}
-		<img src="{{- include.photo | relative_url -}}" alt="{{- include.photo-alt -}}" class="back">
+	<!-- {{- include.photo | relative_url -}} -->
+		<img src="{{- include.photo | absolute_url -}}" alt="{{- include.photo-alt -}}" class="back">
 	{%- endcapture -%}
 	{%- assign _class = 'shade-one cover dark' -%}
 {%- else -%}

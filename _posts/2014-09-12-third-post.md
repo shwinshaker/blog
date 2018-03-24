@@ -1,5 +1,5 @@
 ---
-title: Third Post
+title: Example
 author: Chris
 layout: post
 icon: fa-lightbulb-o
