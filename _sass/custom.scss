@@ -1,0 +1,33 @@
+/* customize the markdown style */
+
+/* p -> md: body */
+p {
+	font-size: 12pt;
+	line-height: 1.5em;
+	margin-bottom: 1.0ex;  /* <p> block bottom space */
+}
+
+/* ol -> md: number list */
+ol{
+	font-size: 1.0em;
+	margin-bottom: 0.5em;
+}
+
+/* ul -> md: list */
+ul{
+	font-size: 1.0em;
+	margin-bottom: 0.5em;
+}
+
+/* h1 -> md: # */
+h1{
+	font-size: 1.0em;
+	margin-bottom: 0.3em;
+}
+
+/* h3 -> md: ### */
+h3{
+	font-size: 1.5em;
+	margin-bottom: 0.3em;
+}
+
