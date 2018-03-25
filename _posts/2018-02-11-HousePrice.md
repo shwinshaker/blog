@@ -105,8 +105,8 @@ category: Internship
 
 &emsp;&emsp;下面来对宏观经济数据做一些清洗和补充。对现有宏观数据进行提取和整合后共可得到34个特征。将每个特征的数据和房价指数的时间区间作对应后，统计对每个特征的有效数据，连同房价指数列表如下。
 
-<table style="line-height: 0.6em; margin-bottom: 0pt">
-    <tr style="background-color: #aaa; color: white">
+<table style="line-height: 1.0em; margin-bottom: 0pt">
+    <tr style="background-color: #aaa; color: white; line-height: 1.0em">
         <td></td>
         <td>特征名</td>
         <td>单位</td>
