@@ -14,10 +14,14 @@ ol{
 }
 
 /* ul -> md: list */
-ul{
+/* ul{
 	font-size: 1.0em;
+	line-height: 1.5em;
 	margin-bottom: 0.5em;
-}
+	/* margin-left: 4.0em; */
+	/* padding: 2.0em */
+	/* text-indent: 0.8em */
+    } */
 
 /* h1 -> md: # */
 h1{
@@ -25,9 +29,20 @@ h1{
 	margin-bottom: 0.3em;
 }
 
+/* h2 -> md: ## */
+h2{
+	font-size: 1.2em;
+	margin-bottom: 0.3em;
+}
+
 /* h3 -> md: ### */
 h3{
 	font-size: 1.5em;
 	margin-bottom: 0.3em;
+}
+
+/* table -> md: |-| */
+table{
+	font-size: 10pt;
 }
 
