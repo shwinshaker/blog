@@ -30,4 +30,10 @@
   {%- if site.email -%}
   <li><a href="mailto:{{- site.email -}}" class="icon fa-envelope"><span class="label">Email</span></a></li>
   {%- endif -%}
+  {%- if site.weixin -%}
+  <li><a href="{{- site.weixin -}}" class="icon fa-weixin"><span class="label">Weixin</span></a></li>
+  {%- endif -%}
+    {%- if site.weixin -%}
+  <li><a href="{{- site.douban -}}"><span style="font-size: 1.3em">豆</span></a></li>
+  {%- endif -%}
 </ul>

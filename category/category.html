@@ -6,27 +6,132 @@ order: 3
 <!-- {%- assign _categories = site.categories | sort | reverse -%} -->
 
 <div class="tags-expo">
-  <div class="tags-expo-list">
+<!--   <div class="tags-expo-list">
     {% for tag in site.categories %}
+    {% if tag[0] == "Project" %}
     <a href="#{{ tag[0] | slugify }}" class="post-tag">{{ tag[0] }}</a>
     |
+    {% endif %}
     {% endfor %}
-  </div>
+  </div> -->
+  <a href="#Research" class="scrolly">Research</a>
+  |
+  <a href="#Internship" class="scrolly">Internship</a>
+  |
+  <a href="#Leadership" class="scrolly">Leadership</a>
+  |
+  <a href="#Design" class="scrolly">Design</a>
+
   <hr/>
-  <div class="tags-expo-section">
-    {% for tag in site.categories %}
-    <h3 id="{{ tag[0] | slugify }}">{{ tag[0] }}</h3>
-    <ul class="tags-expo-posts">
+
+  <h3 class="category_head" id="Research">Research</h3>
+  <!-- <ul class="tags-expo-posts"> -->
+  {% for tag in site.categories %}
+    {% if tag[0] == "Research" %}
       {% for post in tag[1] %}
         <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
-      <li>
-        {{ post.title }}
-	-
-      <small class="post-date">{{ post.date | date_to_string }}</small>
-      </li>
-      </a>
+          <li>
+          {{ post.title }}
+          -
+          <small class="post-date">{{ post.date | date_to_string }}</small>
+          </li>
+        </a>
       {% endfor %}
-    </ul>
+    {% endif %}
+  {% endfor %}
+
+  <h3 class="category_head" id="Internship">Internship</h3>
+  {% for tag in site.categories %}
+    {% if tag[0] == "Internship" %}
+      {% for post in tag[1] %}
+        <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
+          <li>
+          {{ post.title }}
+          -
+          <small class="post-date">{{ post.date | date_to_string }}</small>
+          </li>
+        </a>
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+
+  <h3 class="category_head" id="Leadership">Leadership</h3>
+  {% for tag in site.categories %}
+    {% if tag[0] == "Leadership" %}
+      {% for post in tag[1] %}
+        <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
+          <li>
+          {{ post.title }}
+          -
+          <small class="post-date">{{ post.date | date_to_string }}</small>
+          </li>
+        </a>
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+
+  <h3 class="category_head" id="Design">Design</h3>
+  {% for tag in site.categories %}
+    {% if tag[0] == "Design" %}
+      {% for post in tag[1] %}
+        <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
+          <li>
+          {{ post.title }}
+          -
+          <small class="post-date">{{ post.date | date_to_string }}</small>
+          </li>
+        </a>
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+  <!-- </ul> -->
+<!--   <div class="tags-expo-section">
+    {% for tag in site.categories %}
+      {% if tag[0] == "Research" %}
+
+      {% endif %}
+      {% if tag[0] == "Internship" %}
+        <h3 id="{{ tag[0] | slugify }}">{{ tag[0] }}</h3>
+        <ul class="tags-expo-posts">
+        {% for post in tag[1] %}
+          <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
+            <li>
+            {{ post.title }}
+            -
+            <small class="post-date">{{ post.date | date_to_string }}</small>
+            </li>
+          </a>
+        {% endfor %}
+        </ul>
+      {% endif %}
+      {% if tag[0] == "Project" %}
+        <h3 id="{{ tag[0] | slugify }}">{{ tag[0] }}</h3>
+        <ul class="tags-expo-posts">
+        {% for post in tag[1] %}
+          <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
+            <li>
+            {{ post.title }}
+            -
+            <small class="post-date">{{ post.date | date_to_string }}</small>
+            </li>
+          </a>
+        {% endfor %}
+        </ul>
+      {% endif %}
+      {% if tag[0] == "Design" %}
+        <h3 id="{{ tag[0] | slugify }}">{{ tag[0] }}</h3>
+        <ul class="tags-expo-posts">
+        {% for post in tag[1] %}
+          <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
+            <li>
+            {{ post.title }}
+            -
+            <small class="post-date">{{ post.date | date_to_string }}</small>
+            </li>
+          </a>
+        {% endfor %}
+        </ul>
+      {% endif %}
     {% endfor %}
-  </div>
+  </div> -->
 </div>
