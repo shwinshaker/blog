@@ -1,0 +1,55 @@
+---
+title: Processing Demo
+layout: post
+category: Design
+---
+
+<script src="{{ 'assets/processing/processing.min.js' | relative_url }}"></script>
+<h2>Twist Beauty</h2>
+<p>有朋友要提交一个艺术设计作业，要求使用基于Java的Processing实现，给了我一个实验性的源码。之前没有接触过Processing，甚至连Java也没有接触过。趁着周末有闲，一边学习，一边修改和补充了一下，添加了一些控制单元，贴到这里，就算是学会了吧哈哈。感觉效果是接近于PS的扭曲和液化功能，嗯，这个作品名字是我瞎诌的。</p>
+<canvas data-processing-sources="{{ 'assets/processing/vortex/vortex.pde' | relative_url }} {{ 'assets/processing/vortex/Attractor.pde' | relative_url }} {{ 'assets/processing/vortex/GridPoints.pde' | relative_url }} {{ 'assets/processing/vortex/Button.pde' | relative_url }} {{ 'assets/processing/vortex/Triangle.pde' | relative_url }}"></canvas>
+
+<h2 style="margin-top: 3ex">Processing</h2>
+
+<p>Processing是一个基于Java的可视化编程工具，最重要的两个内置函数是</p>
+<ul style="font-size: 12pt; margin-bottom: 0ex; margin-top: 0ex">
+	<li>Setup: 在启动时调用一次，进行参数的初始化</li>
+	<li>Draw: 以某频率重复调用，将内容显示在窗口中，具体频率可以使用frameRate函数控制</li>
+</ul>
+<p>其他基本的函数有</p>
+<ul style="font-size: 12pt; margin-bottom: 0ex; margin-top: 0ex">
+	<li>loop: 开始画图，即重复调用Draw</li>
+	<li>noLoop: 停止画图</li>
+	<li>redraw: 调用一次draw</li>
+	<li>fill: 接下来所有Object将填充对应的颜色</li>
+	<li>noFill: 不填充颜色</li>
+	<li>mouse类: 鼠标交互</li>
+	<li>key类: 键盘交互</li>
+	<li>PGraphics类: 可用于图形缓存，如果一部分draw的内容在一段时间内是静态的，可以用得上</li>
+	<li>begin/endRecord: 将图像信息保存为PDF或SVG格式，其中SVG即使用的XML语言, 可以进行数据传输</li>
+</ul>
+<p>注意如果draw函数中没有先画背景，就会导致上一帧的内容和当前帧内容混杂到一起，如果想在保持画图内容不变的时候加一些鼠标指示标记，必须将背景设置为画图内容，这时候PGraphic就可以派上用场了，可惜的是Web移植并不支持图像背景。</p>
+
+<h1 style="margin-top: 2ex">一些问题</h1>
+<ul style="font-size: 12pt; margin-bottom: 0ex">
+	<li>Processing似乎不支持函数重载</li>
+	<li>没有提供方便的Button类，自己写个Button太费事了</li>
+	<li>鼠标指针在窗口外时，mouseX和mouseY仍然储存之前的鼠标指针位置，这不方便一些指示物的控制</li>
+	<li>不知道能不能提供一个多层画布的概念，类似于PS, AE, Flash等的图层的概念，这样方便对各层的Object分别控制，比如图像和指示物件。PGraphics类似乎可以做到，但Web支持不好。</li>
+</ul>
+
+<h1 style="margin-top: 2ex">参考资源</h1>
+<ul style="font-size: 12pt">
+	<li>Processing中文社区 <a href="http://iprocessing.cn">http://iprocessing.cn</a></li>
+	<li>Processing官方文档 <a href="https://processing.org/reference/">Processing Reference</a></li>
+	<li>IBM开发者博客 <a href="https://www.ibm.com/developerworks/cn/opensource/os-datavis/">用 Processing 进行数据可视化</a></li>
+</ul>
+
+<h2 style="margin-top: 3ex">Processing.js</h2>
+<p>将Processing代码 (通常为*.pde文件) 移植到网页上可以使用<a href="http://processingjs.org/articles/p5QuickStart.html">Processing.js</a> (也可以直接使用Web编程工具，见<a href="http://pikipity.github.io/blog/sketchpad.html">[一起将 Processing 镶嵌在网页上]</a>，或者见Processing.js的QuickStart中的介绍)。Processing.js就是将Processing代码翻译成Javascript，并部署在网页画布中。使用时只需在网页中指明Processing.js的位置，然后用Canvas方法将Processing代码引入就可以实现。目前Processing.js仍然有一些问题，不能保证100%还原客户端的效果。</p>
+<h1 style="margin-top: 2ex">一些问题</h1>
+<ul style="font-size: 12pt">
+	<li>Background()函数不能设置PGraphics Object，不得不在仅显示指示的时候仍然重复画图案，导致大量资源浪费。不知道有没有其他的实现方法。</li>
+	<li>鼠标滚轮的响应被页面滚动条覆盖了。暂时不清楚如何解决这个问题。</li>
+	<li>按照Processing.js给出的方法制作网页后，用Safari或者Chrome都不能正常显示，错误原因为 'XMLHttpRequest failure, possibly due to a same-origin policy violation.'，但使用Firefox可以正常显示。不过在使用jekyll编译后，一切正常。 </li>
+</ul>
