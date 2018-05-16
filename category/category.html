@@ -8,28 +8,26 @@ order: 3
 <div class="tags-expo">
 <!--   <div class="tags-expo-list">
     {% for tag in site.categories %}
-    {% if tag[0] == "Project" %}
-    <a href="#{{ tag[0] | slugify }}" class="post-tag">{{ tag[0] }}</a>
-    |
-    {% endif %}
+      <a href="#{{ tag[0] | slugify }}" class="post-tag">{{ tag[0] }}</a>
     {% endfor %}
   </div> -->
-  <a href="#Technique" class="scrolly">Technique</a>
-  |
-  <a href="#Research" class="scrolly">Research</a>
-  |
-  <a href="#Internship" class="scrolly">Internship</a>
-  |
-  <a href="#Leadership" class="scrolly">Leadership</a>
-  |
-  <a href="#Design" class="scrolly">Design</a>
+  <div class="tags-expo-list">
+  <!--   <a href="#Technique" class="scrolly">Technique</a> -->
+    <a href="#Technique" class="post-tag">Technique</a>
+    <a href="#Research" class="post-tag">Research</a>
+    <a href="#Internship" class="post-tag">Internship</a>
+    <a href="#Leadership" class="post-tag">Leadership</a>
+    <a href="#Design" class="post-tag">Design</a>
+  </div>
 
-  <hr/>
+  <hr class="category" />
 
-  <h3 class="category_head" id="Technique">Technique</h3>
-  <!-- <ul class="tags-expo-posts"> -->
+  <div class="tags-expo-section">
+
   {% for tag in site.categories %}
     {% if tag[0] == "Technique" %}
+      <h3 class="category_head" id="Technique">Technique</h3>
+      <ul class="tags-expo-posts">
       {% for post in tag[1] %}
         <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
           <li>
@@ -39,13 +37,14 @@ order: 3
           </li>
         </a>
       {% endfor %}
+      </ul>
     {% endif %}
   {% endfor %}
   
-  <h3 class="category_head" id="Research">Research</h3>
-  <!-- <ul class="tags-expo-posts"> -->
   {% for tag in site.categories %}
     {% if tag[0] == "Research" %}
+      <h3 class="category_head" id="Research">Research</h3>
+      <ul class="tags-expo-posts">
       {% for post in tag[1] %}
         <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
           <li>
@@ -55,12 +54,15 @@ order: 3
           </li>
         </a>
       {% endfor %}
+      </ul>
     {% endif %}
   {% endfor %}
 
-  <h3 class="category_head" id="Internship">Internship</h3>
+  
   {% for tag in site.categories %}
     {% if tag[0] == "Internship" %}
+      <h3 class="category_head" id="Internship">Internship</h3>
+      <ul class="tags-expo-posts">
       {% for post in tag[1] %}
         <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
           <li>
@@ -70,12 +72,15 @@ order: 3
           </li>
         </a>
       {% endfor %}
+      </ul>
     {% endif %}
   {% endfor %}
 
-  <h3 class="category_head" id="Leadership">Leadership</h3>
+  
   {% for tag in site.categories %}
     {% if tag[0] == "Leadership" %}
+      <h3 class="category_head" id="Leadership">Leadership</h3>
+      <ul class="tags-expo-posts">
       {% for post in tag[1] %}
         <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
           <li>
@@ -85,14 +90,17 @@ order: 3
           </li>
         </a>
       {% endfor %}
+      </ul>
     {% endif %}
   {% endfor %}
 
-  <h3 class="category_head" id="Design">Design</h3>
+  
   {% for tag in site.categories %}
     {% if tag[0] == "Design" %}
+      <h3 class="category_head" id="Design">Design</h3>
+      <ul class="tags-expo-posts">
       {% for post in tag[1] %}
-        <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
+        <a href="{{ site.baseurl }}{{ post.url }}">
           <li>
           {{ post.title }}
           -
@@ -100,6 +108,7 @@ order: 3
           </li>
         </a>
       {% endfor %}
+      </ul>
     {% endif %}
   {% endfor %}
   <!-- </ul> -->
@@ -152,4 +161,5 @@ order: 3
       {% endif %}
     {% endfor %}
   </div> -->
+  </div>
 </div>

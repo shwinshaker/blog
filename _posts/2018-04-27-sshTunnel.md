@@ -5,9 +5,72 @@ layout: post
 category: Technique
 ---
 
+<style>
+/*
+#main article {
+	font-family: "PT Sans", Helvetica, Arial, sans-serif;
+}*/
+#main p {
+	font-size: 0.8em
+}
+
+#main h1 {
+	font-size: 1em;
+	margin-top: 1em;
+	font-weight: bold;
+}
+#main h3 {
+	font-size: 1.5em;
+	font-weight: bold;
+}
+#main li {
+	font-size: 0.8em;
+	margin-bottom: 0em
+}
+
+#main ul {
+	margin-bottom: 1em;
+}
+#main blockquote {
+	padding: 0.5em 1em;
+	margin-bottom: 0.5em;
+	/*border: 1px solid #999;*/
+}
+
+#main blockquote:hover{
+  background-color: #555;
+  color: #ddd;
+}
+
+/*#main blockquote:before {
+  content: open-quote;
+  font-size: 100pt;
+  text-align: center;
+  line-height: 20px;
+  color: #000;
+  background: #ddd;
+  float: left;
+  position: relative;
+  top: 30px;
+}*/
+#main strong {
+	font-weight: 500;
+	color: #666/*
+	font-size: 1em;*/
+}
+
+#main code, pre {
+	font-size: 0.8em;
+	font-family: Monaco, Andale Mono, Courier New, monospace;
+}
+#main code:hover, pre:hover {
+	background-color: #eee;
+}
+
+</style>
+
 ### 外网ssh到内网服务器(ssh解决方案)
 > 我的数据都部署在学校服务器上，而人又经常不在学校，所以有这个需求
-
 
 
 # 硬件要求
@@ -58,7 +121,7 @@ category: Technique
 * /etc/ssh_config中的具体配置可能没有很重要
 
 # 其他参考
-> 关于命令参数  
+*关于命令参数*
 
 * `-R` —— **Remote**，反向代理或远程转发   
 * `-L` —— **Local**，正向代理或本地转发  
@@ -67,17 +130,17 @@ category: Technique
 * `-C` —— **Compressed** 压缩数据  
 
 
-> 关于系统  
+*关于系统*
 
 * 如果**Bridge**是windows系统，可以安装`cygwin`来使用linux环境，安装时勾选ssh和sshd；或者可以使用`Putty`或`XShell`等三方软件，其中`XShell`还是很好做隧道的
 
 
-> 关于免密登录  
+*关于免密登录*
 
 * 将公钥`id_rsa.pub`添加到服务器`Authorized_key`中，或者使用`ssh-copy-id`命令，注意文件权限(见另一个gist)
 
 
-> 一些有用的命令  
+*一些有用的命令*
 
 * `server sshd restart` —— 重启sshd服务(如果修改`/etc/sshd_config`则需重启sshd)
 * `netstat -tnl` —— 查看端口监听情况
@@ -85,7 +148,7 @@ category: Technique
 * `ssh -v`可以开启`verbose`模式，用于调试(`ssh -vvv`会输出更多信息)
 
 
-> 一些有用的知识
+*一些有用的知识*
 
 * `127.0.0.1`即`localhost`，`127.0.0.1:Port`只能被`localhost`使用; `0.0.0.0`表示所有连接，`0.0.0.0:Port`可以被任意Client使用
 

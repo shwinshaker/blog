@@ -1,6 +1,8 @@
 /* customize the markdown style */
-
 /* p -> md: body */
+body {
+	font-family: "PT Sans", Helvetica, Arial, sans-serif;
+}
 p {
 	font-size: 12pt;
 	line-height: 1.5em;
@@ -47,7 +49,3 @@ table{
 	font-size: 10pt;
 }
 
-.category_head{
-    margin-top: 1ex;
-    margin-bottom: 0;
-}

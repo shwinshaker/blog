@@ -1,9 +1,40 @@
+$red:      #ac4142;
+$orange:   #d28445;
+$yellow:   #f4bf75;
+$green:    #90a959;
+$cyan:     #75b5aa;
+$blue:     #6a9fb5;
+$magenta:  #aa759f;
+$brown:    #8f5536;
+$default:  #505050;
+
+$white:      #fff;
+$lightgrey:  #eee;
+$black:      #000;
+
+$theme-color: $blue;
+$theme-color-dark: darken($theme-color, 10%);
+
+$post-date-color: #9a9a9a;
+$title-color: #313131;
+$masthead-title-small-color: #c0c0c0;
+
+/* Layout */
+$reverse-layout: true;
+$overlay-sidebar: false;
+
+/* Font stack */
+$font-serif: "PT Serif", Georgia, "Times New Roman", serif;
+$font-sans: "PT Sans", Helvetica, Arial, sans-serif;
+$font-font-awesome: FontAwesome;
+
 .post-tag {
   display: inline-block;
   background: rgba($theme-color, 0.15);
   padding: 0 .5rem;
   margin-right: .5rem;
   border-radius: 4px;
+  border-bottom: none;
   color: $theme-color;
   font-family: $font-sans;
   font-size: 90%;
@@ -17,40 +48,45 @@
     background: $theme-color;
     color: $white;
   }
-  @include transition(all .1s ease-in-out);
+/*  @include transition(all .1s ease-in-out);*/
 }
 
 .tags-expo {
   :target:before {
-    content:"";
-    display:block;
-    height:72px; /* fixed header height*/
-    margin:-72px 0 0; /* negative fixed header height */
+    content: "";
+    display: block;
+    height: 72px; /* fixed header height*/
+    margin: -72px 0 0; /* negative fixed header height */
   }
   .tags-expo-list {
-    @media (min-width: 38em) {
+    margin-top: 0rem;
+/*    @media (min-width: 38em) {
       font-size: 0.9rem;
       .post-tag {
         margin: .2em .3em;
       }
-    }
+    }*/
   }
   .tags-expo-section {
     ul {
       list-style-type: circle;
       list-style-position: inside;
       padding: 0;
+      margin-bottom: .8rem;
       li {
-        @include transition(all .1s ease-in-out);
-        padding: 0 1rem;
+        /*@include transition(all .1s ease-in-out);*/
+        padding: 0 .5rem;
         &:hover {
           list-style-type: disc;
-          padding: 0 .5rem;
+          padding: 0 .2rem;
         }
       }
     }
     a {
       text-decoration: none;
+      &:hover {
+        color: $theme-color;
+      }
     }
     .post-date {
       display: inline-block;
