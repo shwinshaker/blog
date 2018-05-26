@@ -1,5 +1,5 @@
 int xCount = 201;
-int yCount = 101;
+int yCount = 201;
 float gridSize;
 
 boolean fDraw;
@@ -35,16 +35,18 @@ void setup() {
   cursor(ARROW);
   mouseRm = min(width*0.01,height*0.01);
 
+  ellipseMode(RADIUS);
+
   gridSize = max(width, height)*1.5;
   modeButton = new Button(width-rectRadius-5, rectRadius+5, rectRadius, "SQUARE");
   rectMode(RADIUS);
-  resetButton = new Button(modeButton.Cx, modeButton.Cy + modeButton.Radius/2, modeButton.Radius/3, "CIRCLE");
+  resetButton = new Button(modeButton.Cx, modeButton.Cy + modeButton.Radius/2, modeButton.Radius/6, "CIRCLE");
   trigButton1 = new TrigButton(resetButton.Cx - modeButton.Radius/5*4, resetButton.Cy, 
-                               resetButton.Cx - modeButton.Radius/5*4 + resetButton.Radius, resetButton.Cy + resetButton.Radius/2, 
-                               resetButton.Cx - modeButton.Radius/5*4 + resetButton.Radius, resetButton.Cy - resetButton.Radius/2);
+                               resetButton.Cx - modeButton.Radius/5*4 + resetButton.Radius*2, resetButton.Cy + resetButton.Radius, 
+                               resetButton.Cx - modeButton.Radius/5*4 + resetButton.Radius*2, resetButton.Cy - resetButton.Radius);
   trigButton2 = new TrigButton(resetButton.Cx + modeButton.Radius/5*4, resetButton.Cy, 
-                               resetButton.Cx + modeButton.Radius/5*4 - resetButton.Radius, resetButton.Cy + resetButton.Radius/2, 
-                               resetButton.Cx + modeButton.Radius/5*4 - resetButton.Radius, resetButton.Cy - resetButton.Radius/2);
+                               resetButton.Cx + modeButton.Radius/5*4 - resetButton.Radius*2, resetButton.Cy + resetButton.Radius, 
+                               resetButton.Cx + modeButton.Radius/5*4 - resetButton.Radius*2, resetButton.Cy - resetButton.Radius);
    
   //pg = createGraphics(width, height);
 
@@ -183,13 +185,23 @@ void initGrid() {
   }
 }
 
+// void drawLine() {
+//   background(colorBg);
+//   stroke(colorLine);
+//   strokeWeight(3);
+//   for (int i=0; i <points.length; i=i+xCount) {
+//     for (int j=i; j<i+xCount-1; j++) {
+//       line(points[j].loc.x, points[j].loc.y, points[j+1].loc.x, points[j+1].loc.y);
+//     }
+//   }
+// }
+
 void drawLine() {
   background(colorBg);
   stroke(colorLine);
-  strokeWeight(3);
   for (int i=0; i <points.length; i=i+xCount) {
     for (int j=i; j<i+xCount-1; j++) {
-      line(points[j].loc.x, points[j].loc.y, points[j+1].loc.x, points[j+1].loc.y);
+      point(points[j].loc.x, points[j].loc.y);
     }
   }
 }

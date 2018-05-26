@@ -38,6 +38,11 @@ class Attractor {
       }
       points.vel.x = signx * dy * f;
       points.vel.y = signy * dx * f;
-    }
-  }
+    } 
+    // else {
+    //   points.vel.x = 0;
+    //   points.vel.y = 0;   
+    // }
+    // 点不可能转出圈外，所以没必要设置圈外为0
+  } 
 }
