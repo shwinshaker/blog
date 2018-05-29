@@ -1,0 +1,51 @@
+#post {
+/*
+ article {
+	font-family: "PT Sans", Helvetica, Arial, sans-serif;
+	}*/
+	 p {
+		font-size: 0.8em
+	}
+
+	 h1 {
+		font-size: 1em;
+		margin-top: 1em;
+		font-weight: bold;
+	}
+	 h3 {
+		font-size: 1.5em;
+		font-weight: bold;
+	}
+	 li {
+		font-size: 0.8em;
+		margin-bottom: 0em
+	}
+
+	 ul {
+		margin-bottom: 1em;
+	}
+	 blockquote {
+		padding: 0.5em 1em;
+		margin-bottom: 0.5em;
+		/*border: 1px solid #999;*/
+	}
+
+	 blockquote:hover{
+		background-color: #555;
+		color: #ddd;
+	}
+
+	 strong {
+		font-weight: 500;
+	color: #666/*
+	font-size: 1em;*/
+	}
+
+	code, pre {
+		font-size: 0.8em;
+		font-family: Monaco, Andale Mono, Courier New, monospace;
+	}
+	 code:hover, pre:hover {
+		background-color: #eee;
+	}
+}

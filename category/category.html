@@ -111,55 +111,6 @@ order: 3
       </ul>
     {% endif %}
   {% endfor %}
-  <!-- </ul> -->
-<!--   <div class="tags-expo-section">
-    {% for tag in site.categories %}
-      {% if tag[0] == "Research" %}
 
-      {% endif %}
-      {% if tag[0] == "Internship" %}
-        <h3 id="{{ tag[0] | slugify }}">{{ tag[0] }}</h3>
-        <ul class="tags-expo-posts">
-        {% for post in tag[1] %}
-          <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
-            <li>
-            {{ post.title }}
-            -
-            <small class="post-date">{{ post.date | date_to_string }}</small>
-            </li>
-          </a>
-        {% endfor %}
-        </ul>
-      {% endif %}
-      {% if tag[0] == "Project" %}
-        <h3 id="{{ tag[0] | slugify }}">{{ tag[0] }}</h3>
-        <ul class="tags-expo-posts">
-        {% for post in tag[1] %}
-          <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
-            <li>
-            {{ post.title }}
-            -
-            <small class="post-date">{{ post.date | date_to_string }}</small>
-            </li>
-          </a>
-        {% endfor %}
-        </ul>
-      {% endif %}
-      {% if tag[0] == "Design" %}
-        <h3 id="{{ tag[0] | slugify }}">{{ tag[0] }}</h3>
-        <ul class="tags-expo-posts">
-        {% for post in tag[1] %}
-          <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
-            <li>
-            {{ post.title }}
-            -
-            <small class="post-date">{{ post.date | date_to_string }}</small>
-            </li>
-          </a>
-        {% endfor %}
-        </ul>
-      {% endif %}
-    {% endfor %}
-  </div> -->
   </div>
 </div>

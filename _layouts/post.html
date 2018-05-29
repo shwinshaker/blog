@@ -7,12 +7,14 @@ layout: default
 <div id="main">
 	<!-- Post -->
 	<article class="shade-two">
-	  <div class="container">
+	  	<div class="container">
+	  		<!-- My custom markdown style-->
+			<link rel="stylesheet" type="text/css" href="{{- 'assets/css/md.css' | relative_url -}}" />
 			<header>
 				<h2>{{- page.title -}}</h2>
 				<p>{% if page.author %}{{ page.author }}, {% endif %}{{- page.date | date_to_long_string -}}</p>
 			</header>
-	    {{- content -}}
-	  </div>
+	    	{{- content -}}
+		</div>
 	</article>
 </div>

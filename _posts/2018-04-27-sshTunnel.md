@@ -3,9 +3,13 @@ title: ssh Tunnel
 author: Shwin
 layout: post
 category: Technique
+tag: ssh
 ---
 
-<style>
+<!-- <head>
+<link rel="stylesheet" type="text/css" href="{{- 'assets/css/md.css' | relative_url -}}" />
+</head> -->
+<!-- <style>
 /*
 #main article {
 	font-family: "PT Sans", Helvetica, Arial, sans-serif;
@@ -67,7 +71,7 @@ category: Technique
 	background-color: #eee;
 }
 
-</style>
+</style> -->
 
 ### 外网ssh到内网服务器(ssh解决方案)
 > 我的数据都部署在学校服务器上，而人又经常不在学校，所以有这个需求

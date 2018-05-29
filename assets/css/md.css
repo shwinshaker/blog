@@ -1,0 +1,49 @@
+/*
+#main article {
+	font-family: "PT Sans", Helvetica, Arial, sans-serif;
+}*/
+#main p {
+	font-size: 0.8em
+}
+
+#main h1 {
+	font-size: 1em;
+	margin-top: 1em;
+	font-weight: bold;
+}
+#main h3 {
+	font-size: 1.5em;
+	font-weight: bold;
+}
+#main li {
+	font-size: 0.8em;
+	margin-bottom: 0em
+}
+
+#main ul {
+	margin-bottom: 1em;
+}
+#main blockquote {
+	padding: 0.5em 1em;
+	margin-bottom: 0.5em;
+	/*border: 1px solid #999;*/
+}
+
+#main blockquote:hover{
+  background-color: #555;
+  color: #ddd;
+}
+
+#main strong {
+	font-weight: 500;
+	color: #666/*
+	font-size: 1em;*/
+}
+
+#main code, pre {
+	font-size: 0.8em;
+	font-family: Monaco, Andale Mono, Courier New, monospace;
+}
+#main code:hover, pre:hover {
+	background-color: #eee;
+}
