@@ -4,7 +4,12 @@ author: Shwin
 layout: post
 category: Internship
 ---
-
+<!-- <style type="text/css">
+    tr:hover {
+        color: white;
+        background: #AAAAAA;
+    }
+</style> -->
 <h3> <center> 深圳房价预测——基于宏观数据 </center> </h3>
  
 <h1 style="text-align: center; margin-top: 1.0em"> 数据清洗和特征选择 </h1>

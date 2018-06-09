@@ -49,3 +49,15 @@ table{
 	font-size: 10pt;
 }
 
+tr:nth-child(2n+2):hover, tr:nth-child(2n+1):hover {
+	background: #AAAAAA;
+	color: white;
+}
+
+/*下述例子似乎不可行，因为在jekyll-.-.scss里定义了nth-child(2n+2)的background	，
+如果对tr整体应用2n+2行背景不会改变，但字体颜色是会改变的，不清楚具体原因。
+可能是父类的属性并不会直接遗传到已经设定属性的子伪类上*/
+/*tr:hover {
+	background: #AAAAAA;
+	color: white;
+}*/
