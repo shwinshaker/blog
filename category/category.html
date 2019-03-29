@@ -1,115 +1,41 @@
 ---
 layout: page
 title: Categories
-order: 3
+icon: fa-link
+order: 2
 ---
-<!-- {%- assign _categories = site.categories | sort | reverse -%} -->
+{% assign names = "Research,Internship,Technique,Leadership,Design" | split: ',' %}
 
 <div class="tags-expo">
-<!--   <div class="tags-expo-list">
-    {% for tag in site.categories %}
-      <a href="#{{ tag[0] | slugify }}" class="post-tag">{{ tag[0] }}</a>
-    {% endfor %}
-  </div> -->
+
   <div class="tags-expo-list">
-  <!--   <a href="#Technique" class="scrolly">Technique</a> -->
-    <a href="#Technique" class="post-tag">Technique</a>
-    <a href="#Research" class="post-tag">Research</a>
-    <a href="#Internship" class="post-tag">Internship</a>
-    <a href="#Leadership" class="post-tag">Leadership</a>
-    <a href="#Design" class="post-tag">Design</a>
+  {% for name in names %}
+    <a href="#{{ name | slugify }}" class="post-tag">{{ name }}</a>
+  {% endfor %}
   </div>
 
   <hr class="category" />
 
   <div class="tags-expo-section">
-
-  {% for tag in site.categories %}
-    {% if tag[0] == "Technique" %}
-      <h3 class="category_head" id="Technique">Technique</h3>
-      <ul class="tags-expo-posts">
-      {% for post in tag[1] %}
-        <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
-          <li>
-          {{ post.title }}
-          -
-          <small class="post-date">{{ post.date | date_to_string }}</small>
-          </li>
-        </a>
-      {% endfor %}
-      </ul>
-    {% endif %}
-  {% endfor %}
-  
-  {% for tag in site.categories %}
-    {% if tag[0] == "Research" %}
-      <h3 class="category_head" id="Research">Research</h3>
-      <ul class="tags-expo-posts">
-      {% for post in tag[1] %}
-        <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
-          <li>
-          {{ post.title }}
-          -
-          <small class="post-date">{{ post.date | date_to_string }}</small>
-          </li>
-        </a>
-      {% endfor %}
-      </ul>
-    {% endif %}
-  {% endfor %}
-
-  
-  {% for tag in site.categories %}
-    {% if tag[0] == "Internship" %}
-      <h3 class="category_head" id="Internship">Internship</h3>
-      <ul class="tags-expo-posts">
-      {% for post in tag[1] %}
-        <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
-          <li>
-          {{ post.title }}
-          -
-          <small class="post-date">{{ post.date | date_to_string }}</small>
-          </li>
-        </a>
-      {% endfor %}
-      </ul>
-    {% endif %}
-  {% endfor %}
-
-  
-  {% for tag in site.categories %}
-    {% if tag[0] == "Leadership" %}
-      <h3 class="category_head" id="Leadership">Leadership</h3>
-      <ul class="tags-expo-posts">
-      {% for post in tag[1] %}
-        <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
-          <li>
-          {{ post.title }}
-          -
-          <small class="post-date">{{ post.date | date_to_string }}</small>
-          </li>
-        </a>
-      {% endfor %}
-      </ul>
-    {% endif %}
-  {% endfor %}
-
-  
-  {% for tag in site.categories %}
-    {% if tag[0] == "Design" %}
-      <h3 class="category_head" id="Design">Design</h3>
-      <ul class="tags-expo-posts">
-      {% for post in tag[1] %}
-        <a href="{{ site.baseurl }}{{ post.url }}">
-          <li>
-          {{ post.title }}
-          -
-          <small class="post-date">{{ post.date | date_to_string }}</small>
-          </li>
-        </a>
-      {% endfor %}
-      </ul>
-    {% endif %}
+      
+  {% for name in names %}
+    <!-- {% assign _name = name %} -->
+    {% for tag in site.categories %}
+      {% if tag[0] == name %}
+        <h3 class="category_head" id="{{ name | slugify }}">{{ name }}</h3>
+        <ul class="tags-expo-posts">
+        {% for post in tag[1] %}
+          <a class="post-title" href="{{ post.url | relative_url }}">
+            <li>
+            {{ post.title }}
+            -
+            <small class="post-date">{{ post.date | date_to_string }}</small>
+            </li>
+          </a>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endfor %}
   {% endfor %}
 
   </div>
