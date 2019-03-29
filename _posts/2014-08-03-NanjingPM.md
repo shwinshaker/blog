@@ -1,11 +1,12 @@
 ---
-title: 南京市PM2.5污染现状及治理理念
+title: Investigation on the air pollution in Nanjing
 author: shwin
 layout: post
 category: Leadership
 ---
 
 # 大二暑期社会实践
+**-- -- 南京市PM2.5污染现状及治理理念**
 
 &emsp;&emsp;因为我个人的易过敏性，时常受到南京空气污染的困扰，故决定带领一个团队，对南京地区的空气污染状况，尤其是PM2.5污染进行调研。
 
