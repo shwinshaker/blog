@@ -36,7 +36,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   This is the demo site for a Jekyll theme version of
   HTML5 UP's sleek, responsive site template Prologue.
 author: shwin
-email: 740992427@qq.com
+email: justindongchengyu@gmail.com
 avatar: assets/images/stick.jpg
 
 # You'll want to customize url and baseurl for your own site:
@@ -48,7 +48,7 @@ facebook_url:
 github_url: https://github.com/shwinshaker
 googleplus_url:
 instagram_url:
-linkedin_url:
+linkedin_url: https://www.linkedin.com/in/chengyu-dong-16930588/
 pinterest_url:
 slack_url:
 twitter_url:
@@ -71,3 +71,4 @@ gist:
 #     - jekyll-archives
 # jekyll-archives:
 #     enabled: all
+port: 8000
