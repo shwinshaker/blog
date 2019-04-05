@@ -4,7 +4,7 @@ title: Categories
 icon: fa-link
 order: 2
 ---
-{% assign names = "Research,Internship,Technique,Leadership,Design" | split: ',' %}
+{% assign names = "Research,Project,Internship,Technique,Leadership,Design" | split: ',' %}
 
 <div class="tags-expo">
 
@@ -17,7 +17,7 @@ order: 2
   <hr class="category" />
 
   <div class="tags-expo-section">
-      
+
   {% for name in names %}
     <!-- {% assign _name = name %} -->
     {% for tag in site.categories %}
