@@ -35,3 +35,5 @@ Feed a music sheet into the model and see how a specific cell respond to each no
 <img src="https://ws2.sinaimg.cn/large/006tNc79ly1g1rj8ooy3bj30k00k03yv.jpg" style="display: block; width: 50%; margin: auto" />
 
 # see our [report](https://drive.google.com/file/d/1S5T8wWJ72MoGmqfpt5Dl3PsLB0HTM3Qn/view?usp=sharing) for more
+
+# see our [repo](https://github.com/shwinshaker/CS253-PA4) for source code
