@@ -71,4 +71,4 @@ gist:
 #     - jekyll-archives
 # jekyll-archives:
 #     enabled: all
-port: 8000
+port: 8080
